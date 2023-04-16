@@ -1,28 +1,23 @@
 package shop;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static java.lang.System.out;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList <String> list = new ArrayList<>();
-        Rice rice= new Rice();
-        list.add(rice.toString());
+        Map<ShopDepartment, ArrayList<Good>> listGoods = new HashMap<>();
+        ShopDepartment departmentGrocery = new ShopDepartment("Department Grocery");
+        Good semolina = new Good("Semolina");
+        ArrayList<Good> goods = new ArrayList<>();
+        goods.add(semolina);
+        goods.add(new Good("Rice"));
+        listGoods.put(departmentGrocery, goods);
+        ArrayList<Good> goodArrayList = listGoods.get(departmentGrocery);
+        out.println(goodArrayList);
 
-        Buckwheat buckwheat = new Buckwheat();
-        list.add(buckwheat.toString());
-
-        Semolina semolina = new Semolina();
-        list.add(semolina.toString());
-
-        System.out.println(list.size());
-        System.out.println(list.get(1));
-
-//        list.remove(1);
-//        list.clear();
-
-        for (String l : list) {
-            System.out.println(l);
-        }
 
 
 
