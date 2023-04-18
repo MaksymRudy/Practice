@@ -11,6 +11,8 @@ public class Main {
     public static void main(String[] args) {
         Map<Author, Set<Book>> authorToBooks = new HashMap<>();
         Author joshuaBloch = new Author("Joshua Bloch");//створив екземпляр класа автор
+        out.println(joshuaBloch.getName());
+
         Book effectiveJava = new Book("Effective java");// створив інстанс/екземпляр класа книги
         Set<Book> books = new HashSet<>();
         books.add(effectiveJava);
