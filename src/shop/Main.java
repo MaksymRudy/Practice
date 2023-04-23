@@ -10,18 +10,18 @@ public class Main {
     public static void main(String[] args) {
         Map<ShopDepartment, ArrayList<Good>> shopDepartmentToGoods = new HashMap<>();
 
-        ShopDepartment departmentGrocery = new ShopDepartment("Department Grocery");
+        ShopDepartment departmentGrocery = new ShopDepartment("Department Grocery"); // Севорюю ключ
 
-        ArrayList<Good> groceryGoods = new ArrayList<>();
+        ArrayList<Good> groceryGoods = new ArrayList<>(); // Створюю значення
 
         Good semolina = new Good("Semolina");
         groceryGoods.add(semolina);
         groceryGoods.add(new Good("Rice"));
         groceryGoods.add(new Good("Buckwheat"));
-        shopDepartmentToGoods.put(departmentGrocery, groceryGoods);
+        shopDepartmentToGoods.put(departmentGrocery, groceryGoods); // ставимо ключ-значення в Мап
 
-        ArrayList<Good> groceriesGoods = shopDepartmentToGoods.get(departmentGrocery);
-        out.println(groceriesGoods);
+        ArrayList<Good> groceriesGoods = shopDepartmentToGoods.get(departmentGrocery); //Витягуемо значення по ключю з Мап
+        out.println(groceriesGoods); // виводимо
 
 
 
@@ -50,8 +50,21 @@ public class Main {
         shopDepartmentToGoods.put(departmentSport, sportGoods);
         out.println(sportGoods);
 
+
+        ShopDepartment departmentTourist = new ShopDepartment("Department Tourism");
+
+        ArrayList<Good> tourismGoods = new ArrayList<>();
+
+        Good tent = new Good("Tent");
+        tourismGoods.add(tent);
+        tourismGoods.add(new Good("Rope"));
+        tourismGoods.add(new Good("Brazier"));
+        shopDepartmentToGoods.put(departmentTourist,tourismGoods);
+        out.println(tourismGoods);
+
         tire.setTitle("tire2");
         out.println(shopDepartmentToGoods);
+
 
 
 
