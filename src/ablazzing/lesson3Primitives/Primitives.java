@@ -34,8 +34,21 @@ public class Primitives {
 
         double doubleNumber = 1.1234567890123467890;
         float floatNumber = 1.1234567890123467890F;
-        System.out.println(doubleNumber);
-        System.out.println(floatNumber);
+//        System.out.println(doubleNumber);
+//        System.out.println(floatNumber);
+
+        //Char - character (символ), 16 bit
+//        char letter = 'Я' + 1; //числовое  отображение наших символов = а
+        char letter = 70;        // F
+//        System.out.println(letter);
+
+        char newLine = '\n';
+        System.out.print("a");
+        System.out.print(newLine);
+        System.out.print("b\n");
+        char tab = '\t';       // 4 пробела
+        char escape = '\\';
+        System.out.println(escape);
 
     }
 }
